@@ -41,6 +41,12 @@ def find_kmers(dna, filter_size: int):
             
     return kmer_list
 
+def compliment(kmer):
+    compliment = ""
+    for i in range(0, len(kmer)):
+        compliment += base_pairs[kmer]
+    return compliment
+
 def reverse_compliment(kmer):
     #since we bind with the reverse 
     reverse = kmer[::-1]
